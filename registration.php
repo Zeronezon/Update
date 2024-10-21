@@ -62,6 +62,7 @@ if (isset($_POST['btnsave'])) {
     $select->bindParam(':role', $userrole);
   
 
+  $row = $select->fetch(PDO::FETCH_ASSOC);
     if($select->execute()){
         //echo 'Insert successful into the database';
         $_SESSION['status']="Insert successful into the database";
